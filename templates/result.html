@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Results</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center">Scan Results</h1>
+        <div class="card p-3 mt-4">
+            <h5>File: {{ report.filename }}</h5>
+            <p><strong>Number of Pages:</strong> {{ report.num_pages }}</p>
+            <p><strong>Metadata:</strong></p>
+            <ul>
+                {% for key, value in report.metadata.items() %}
+                    <li>{{ key }}: {{ value }}</li>
+                {% endfor %}
+            </ul>
+            <p><strong>YARA Matches:</strong></p>
+            <ul>
+                {% if report.yara_matches %}
+                    {% for match in report.yara_matches %}
+                        <li>{{ match }}</li>
+                    {% endfor %}
+                {% else %}
+                    <li>No suspicious content detected.</li>
+                {% endif %}
+            </ul>
+            <p><strong>PDFiD Output:</strong></p>
+            <pre>{{ report.pdfid_output }}</pre>
+        </div>
+        <a href="/" class="btn btn-secondary mt-3">Scan Another PDF</a>
+    </div>
+</body>
+</html>
