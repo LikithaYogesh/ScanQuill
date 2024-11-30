@@ -48,7 +48,7 @@ def analyze_with_pdfid(file_path):
         return f"Exception while running PDFiD: {e}"
 
 # Configure Gemini API with your API key
-genai.configure(api_key="AIzaSyBfU2nHcesPIYnBTp4_w6N6CG-K1h2Y5VA")
+genai.configure(api_key="your_key")
 
 def analyze_message_with_gemini(message):
     try:
