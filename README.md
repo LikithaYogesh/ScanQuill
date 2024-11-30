@@ -7,9 +7,13 @@ ScanQuill is a web-based tool designed to enhance digital security by analyzing 
 ## Features
 
    PDF Scan: Analyzes PDF files for malicious scripts, embedded vulnerabilities, and other threats.
+   
    Message Analysis: Detects potential phishing attempts or suspicious elements in text messages.
+   
    User-Friendly Interface: A clean and responsive React-based frontend for easy interaction.
+   
    AI-Powered Backend: Leverages Google Generative AI for advanced text analysis.
+   
    YARA Integration: Utilizes YARA rules for scanning PDFs for embedded risks.
 
 ---
@@ -77,17 +81,22 @@ Message Analysis
 
 ## Technologies Used
 
-Backend
+### Backend
 
-  Flask (Python),
-  Google Generative AI,
-  YARA,
+  Flask (Python)
+  
+  Google Generative AI
+  
+  YARA
+  
   PyPDF2
 
-Frontend
+### Frontend
 
-  React,
-  React Router DOM,
+  React
+  
+  React Router DOM
+  
   Axios
 
 ---
